@@ -320,17 +320,6 @@
                       </a>
                     </span>
 
-                    <!-- <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span> -->
-
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
                     <a href="https://github.com/YOUR REPO HERE" target="_blank"
@@ -350,6 +339,17 @@
                     <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
+                </a>
+              </span>
+                      
+              <!-- TODO: Add your supplementary material PDF or remove this section -->
+                <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="hf hf-logo"></i>
+                  </span>
+                  <span>Models</span>
                 </a>
               </span>
             </div>
@@ -405,14 +405,13 @@
       
       <!-- 图片 -->
       <div class="has-text-centered mb-6">
-        <img src="static/images/carousel1.jpg" alt="GUI-Rise Framework Illustration" loading="lazy" />
+        <img src="static/images/overview.jpg" alt="GUI-Rise agent framework overview. It introduces a three-subtask framework that integrates structured reasoning, action prediction, and history summarization. 
+  At each step, the agent performs structured reasoning (progress estimation and decision analysis), predicts the next GUI action, and updates a compact history summary for the next iteration." loading="lazy" />
       </div>
       
       <!-- 文本描述 -->
       <div class="content">
-        <p>We design and propose GUI-Rise, a reasoning-augmented agent for GUI navigation. At the core of GUI-Rise is a three-stage sub-task framework that emulates the human "think-act-summarize" decision-making process. This ensures that the agent makes optimal judgments at each step based on sufficient historical information.</p>
-        
-        <p>As illustrated in the figure above, during each interaction with the GUI environment, GUI-Rise sequentially executes the following three tightly-coupled sub-tasks:</p>
+        <p>We design and propose GUI-Rise, a reasoning-augmented agent for GUI navigation. At the core of GUI-Rise is a three-stage sub-task framework that emulates the human "think-act-summarize" decision-making process. This ensures that the agent makes optimal judgments at each step based on sufficient historical information. During each interaction with the GUI environment, GUI-Rise sequentially executes the following three tightly-coupled sub-tasks:</p>
         
         <ol>
           <li><strong>1. Structured Reasoning Subtask:</strong> The agent first evaluates the current task progress to determine the next course of action.</li>
@@ -435,7 +434,7 @@
       
       <!-- 图片 -->
       <div class="has-text-centered mb-6">
-        <img src="static/images/carousel1.jpg" alt="GUI-Rise Framework Illustration" loading="lazy" />
+        <img src="static/images/pipeline.jpg" alt="Overview of the GUI-Rise training pipeline. The training consists of two stages: (1) supervised learning with pseudo-labeled summaries and ground truth action trajectories to initialize reasoning, and (2) reinforcement learning with rule-based and model-based rewards to improve decision-making and generalization." loading="lazy" />
       </div>
       
       <!-- 文本描述 -->
@@ -465,7 +464,7 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
+        <img src="static/images/experiment_1.png" alt="Out-of-domain evaluation results on the Mind2Web benchmark. The table reports performance under two settings: (1) the standard setting, where models are trained on the Mind2Web training set and evaluated on its test set; and (2) the zero-shot setting, where models are trained on the GUIAct training set and evaluated on the Mind2Web test set." loading="lazy"/>
         <!-- TODO: Replace with description of this result -->
         <h2 class="subtitle has-text-centered">
           First image description.
@@ -473,25 +472,18 @@
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
+        <img src="static/images/experiment_2.png" alt="Evaluation results on the AITW benchmark. The table reports performance under two settings: (1) the in-domain setting, where models are trained on the AITW training set and evaluated on its test set; and (2) the zero-shot setting, where models are trained on the GUIAct training set and evaluated on the AITW test set." loading="lazy"/>
         <h2 class="subtitle has-text-centered">
           Second image description.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
+        <img src="static/images/online_experiment.png" alt="Success rate (%) on online benchmarks. MiniWob(ZS) follows the zero-shot setting and MiniWob(FT) follows the fine-tuning setting, and * means results are evaluated on the chrome-split of OSWorld." loading="lazy"/>
         <h2 class="subtitle has-text-centered">
          Third image description.
        </h2>
      </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
 
     <!-- 文本描述 -->
       <div class="content">
@@ -500,7 +492,7 @@
 
     <!-- 图片 -->
       <div class="has-text-centered mb-6">
-        <img src="static/images/carousel1.jpg" alt="GUI-Rise Framework Illustration" loading="lazy" />
+        <img src="static/images/ablation_study.png" alt="Ablation study of GUI-Rise on the AITW benchmark. ''TST'' denotes the use of two-stage training with RL; ''SCoT'' indicates the incorporation of structured Chain-of-Thought reasoning; ''HS'' means using history summary as input; ''HSR'' refers to applying the history summary reward during RL." loading="lazy" />
       </div>
 
     <!-- 文本描述 -->
@@ -523,7 +515,7 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
+        <img src="static/images/mind2web_trajectory.png" alt="A case study from the Mind2Web dataset illustrates detailed reasoning across two consecutive steps." loading="lazy"/>
         <!-- TODO: Replace with description of this result -->
         <h2 class="subtitle has-text-centered">
           First image description.
@@ -531,25 +523,11 @@
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
+        <img src="static/images/aitw_trajectory.png" alt="A case study from the AITW dataset illustrates detailed reasoning across two consecutive steps." loading="lazy"/>
         <h2 class="subtitle has-text-centered">
           Second image description.
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
   </div>
 </div>
 </div>
@@ -557,9 +535,9 @@
 <!-- End Visualization Section -->
 
 
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- 
+Paper poster -->
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -570,13 +548,13 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
 
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
+<!-- BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
         <h2 class="title">BibTeX</h2>
@@ -593,7 +571,7 @@
   url={https://your-domain.com/your-project-page}
 }</code></pre>
     </div>
-</section>
+</section> -->
 <!--End BibTex citation -->
 
 
