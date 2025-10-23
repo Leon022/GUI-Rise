@@ -414,9 +414,9 @@
         <p>We design and propose GUI-Rise, a reasoning-augmented agent for GUI navigation. At the core of GUI-Rise is a three-stage sub-task framework that emulates the human "think-act-summarize" decision-making process. This ensures that the agent makes optimal judgments at each step based on sufficient historical information. During each interaction with the GUI environment, GUI-Rise sequentially executes the following three tightly-coupled sub-tasks:</p>
         
         <ol>
-          <li><strong>1. Structured Reasoning Subtask:</strong> The agent first evaluates the current task progress to determine the next course of action.</li>
-          <li><strong>2. Action Prediction Subtask:</strong> Based on the outcome of the reasoning stage, it then outputs an action in the specified format.</li>
-          <li><strong>3. History Summarization Subtask:</strong> Finally, it compresses the executed operation and the corresponding GUI state into a compact and coherent representation for future reference.</li>
+          <li><strong>Structured Reasoning Subtask:</strong> The agent first evaluates the current task progress to determine the next course of action.</li>
+          <li><strong>Action Prediction Subtask:</strong> Based on the outcome of the reasoning stage, it then outputs an action in the specified format.</li>
+          <li><strong>History Summarization Subtask:</strong> Finally, it compresses the executed operation and the corresponding GUI state into a compact and coherent representation for future reference.</li>
         </ol>
       </div>
     </div>
@@ -444,9 +444,9 @@
         <p>We employ Group Relative Policy Optimization (GRPO) with three complementary reward functions during the reinforcement learning stage:</p>
         
         <ol>
-          <li><strong>1. Format Reward:</strong> Enforcing structured reasoning through semantic tagging of components.</li>
-          <li><strong>2. Action Accuracy Reward:</strong> Evaluating the accuracy and consistency of predicted actions.</li>
-          <li><strong>3. History Summarization Reward:</strong> Assessing the history summary's quality for future decisions.</li>
+          <li><strong>Format Reward:</strong> Enforcing structured reasoning through semantic tagging of components.</li>
+          <li><strong>Action Accuracy Reward:</strong> Evaluating the accuracy and consistency of predicted actions.</li>
+          <li><strong>History Summarization Reward:</strong> Assessing the history summary's quality for future decisions.</li>
         </ol>
       </div>
     </div>
