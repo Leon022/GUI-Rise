@@ -83,6 +83,7 @@
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/huggingface-icons/1.0.0/huggingface-icons.min.css">
   
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -222,53 +223,6 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
 
   <main id="main-content">
   <section class="hero">
@@ -461,51 +415,51 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title has-text-centered mb-6">Experiments</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/experiment_1.png" alt="Out-of-domain evaluation results on the Mind2Web benchmark. The table reports performance under two settings: (1) the standard setting, where models are trained on the Mind2Web training set and evaluated on its test set; and (2) the zero-shot setting, where models are trained on the GUIAct training set and evaluated on the Mind2Web test set." loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          Out-of-domain evaluation results on the Mind2Web benchmark. The table reports performance under two settings: (1) the standard setting, where models are trained on the Mind2Web training set and evaluated on its test set; and (2) the zero-shot setting, where models are trained on the GUIAct training set and evaluated on the Mind2Web test set.
-        </h2>
+      
+      <!-- 第一段：前三张结果图 -->
+      <div class="mb-6">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="static/images/experiment_1.png" alt="Out-of-domain evaluation results on the Mind2Web benchmark. The table reports performance under two settings: (1) the standard setting, where models are trained on the Mind2Web training set and evaluated on its test set; and (2) the zero-shot setting, where models are trained on the GUIAct training set and evaluated on the Mind2Web test set." loading="lazy"/>
+            <h2 class="subtitle has-text-centered">
+              Out-of-domain evaluation results on the Mind2Web benchmark. The table reports performance under two settings: (1) the standard setting, where models are trained on the Mind2Web training set and evaluated on its test set; and (2) the zero-shot setting, where models are trained on the GUIAct training set and evaluated on the Mind2Web test set.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/experiment_2.png" alt="Evaluation results on the AITW benchmark. The table reports performance under two settings: (1) the in-domain setting, where models are trained on the AITW training set and evaluated on its test set; and (2) the zero-shot setting, where models are trained on the GUIAct training set and evaluated on the AITW test set." loading="lazy"/>
+            <h2 class="subtitle has-text-centered">
+              Evaluation results on the AITW benchmark. The table reports performance under two settings: (1) the in-domain setting, where models are trained on the AITW training set and evaluated on its test set; and (2) the zero-shot setting, where models are trained on the GUIAct training set and evaluated on the AITW test set.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/online_experiment.png" alt="Success rate (%) on online benchmarks. MiniWob(ZS) follows the zero-shot setting and MiniWob(FT) follows the fine-tuning setting, and * means results are evaluated on the chrome-split of OSWorld." loading="lazy"/>
+            <h2 class="subtitle has-text-centered">
+              Success rate (%) on online benchmarks. MiniWob(ZS) follows the zero-shot setting and MiniWob(FT) follows the fine-tuning setting, and * means results are evaluated on the chrome-split of OSWorld.
+            </h2>
+          </div>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/experiment_2.png" alt="Evaluation results on the AITW benchmark. The table reports performance under two settings: (1) the in-domain setting, where models are trained on the AITW training set and evaluated on its test set; and (2) the zero-shot setting, where models are trained on the GUIAct training set and evaluated on the AITW test set." loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Evaluation results on the AITW benchmark. The table reports performance under two settings: (1) the in-domain setting, where models are trained on the AITW training set and evaluated on its test set; and (2) the zero-shot setting, where models are trained on the GUIAct training set and evaluated on the AITW test set.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/online_experiment.png" alt="Success rate (%) on online benchmarks. MiniWob(ZS) follows the zero-shot setting and MiniWob(FT) follows the fine-tuning setting, and * means results are evaluated on the chrome-split of OSWorld." loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Success rate (%) on online benchmarks. MiniWob(ZS) follows the zero-shot setting and MiniWob(FT) follows the fine-tuning setting, and * means results are evaluated on the chrome-split of OSWorld.
-       </h2>
-     </div>
 
-    <!-- 文本描述 -->
-      <div class="content">
+      <!-- 第二段：评估标准描述 -->
+      <div class="content mb-6">
         <p>To comprehensively evaluate the performance of GUI-Rise, we design evaluation criteria from two perspectives: (1) Out-of-domain Evolution. We use the GUIAct benchmark as the training set and conduct evaluations on offline benchmarks such as AITW and Mind2Web, as well as online benchmarks including MiniWob, OSWorld, and AndroidWorld. (2) In-domain Evolution. We utilize AITW, Mind2Web, and MiniWob benchmarks as training data, and evaluate on their respective test sets.</p>
-    </div>
+      </div>
 
-    <!-- 图片 -->
+      <!-- 第三段：消融研究图 -->
       <div class="has-text-centered mb-6">
         <img src="static/images/ablation_study.png" alt="Ablation study of GUI-Rise on the AITW benchmark. ''TST'' denotes the use of two-stage training with RL; ''SCoT'' indicates the incorporation of structured Chain-of-Thought reasoning; ''HS'' means using history summary as input; ''HSR'' refers to applying the history summary reward during RL." loading="lazy" />
         <h2 class="subtitle has-text-centered">
-         Ablation study of GUI-Rise on the AITW benchmark. ''TST'' denotes the use of two-stage training with RL; ''SCoT'' indicates the incorporation of structured Chain-of-Thought reasoning; ''HS'' means using history summary as input; ''HSR'' refers to applying the history summary reward during RL.
-       </h2>
+          Ablation study of GUI-Rise on the AITW benchmark. ''TST'' denotes the use of two-stage training with RL; ''SCoT'' indicates the incorporation of structured Chain-of-Thought reasoning; ''HS'' means using history summary as input; ''HSR'' refers to applying the history summary reward during RL.
+        </h2>
       </div>
 
-    <!-- 文本描述 -->
+      <!-- 第四段：消融研究描述 -->
       <div class="content">
         <p>Ablation Studies. We report the results of ablation studies on GUI-Rise-2B using the AITW benchmark, aiming to assess the effects of components such as two-stage training, structured reasoning, and history summarization.</p>
+      </div>
+      
     </div>
-    
   </div>
-</div>
-</div>
 </section>
 <!-- End Experiments Section -->
 
